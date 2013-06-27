@@ -5,6 +5,12 @@ from django.test import TestCase
 
 from registration.forms import RegistrationForm
 
+try:
+    from django.contrib.auth import get_user_model
+    User = get_user_model()
+except ImportError:
+    from django.contrib.auth.models import User
+
 
 class SimpleBackendViewTests(TestCase):
     urls = 'registration.backends.simple.urls'

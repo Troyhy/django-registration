@@ -11,6 +11,12 @@ from django.utils.hashcompat import sha_constructor
 
 from registration.models import RegistrationProfile
 
+try:
+    from django.contrib.auth import get_user_model
+    User = get_user_model()
+except ImportError:
+    from django.contrib.auth.models import User
+
 
 class RegistrationModelTests(TestCase):
     """

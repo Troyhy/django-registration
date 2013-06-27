@@ -13,6 +13,12 @@ from registration.forms import RegistrationForm
 from registration.backends.default.views import RegistrationView
 from registration.models import RegistrationProfile
 
+try:
+    from django.contrib.auth import get_user_model
+    User = get_user_model()
+except ImportError:
+    from django.contrib.auth.models import User
+
 
 class DefaultBackendViewTests(TestCase):
     """
