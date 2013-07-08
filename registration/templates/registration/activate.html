@@ -1,0 +1,11 @@
+{% extends "registration/registration_base.html" %}
+{% comment %}
+context:
+activation_key
+The activation key used during the activation attempt.
+{% endcomment %}
+
+{% block registration_content %}
+    <h1>Activation failed</h1>
+    <p>Activation code was already user or too old. Please try activating your account again </p>
+{% endblock registration_content %}

@@ -1,0 +1,15 @@
+{% extends "registration_base.html" %}
+{% comment %}
+context
+form
+The registration form. This will be an instance of some subclass of django.forms.Form;
+ consult Django’s forms documentation for information on how to display this in a template.
+{% endcomment %}
+
+{% block registration_content %}
+<form  method="post">{%csrf_token%}
+    {{form.as_p}}
+</form>
+{% endblock registration_content %}
+
+
