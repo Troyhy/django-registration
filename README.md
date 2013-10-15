@@ -4,7 +4,9 @@ clone of https://bitbucket.org/chuck211991/django-registration
 
 Why clone this app?
 ===================
-Registration program is very good as it is, but when ading it to a new proect it's always missing templates. So my motivation was to clone project and add defautl templates that will make project easy to setup.
+Registration program is very good as it is, but when adding it to a new proect there is
+always templates missing. So my motivation was to clone the project and add default templates
+that will make django-reistration easy to setup.
 
 User quide
 ==========
