@@ -1,7 +1,7 @@
 {% extends "registration/registration_base.html" %}
 {% load sekizai_tags i18n %}
 {% block registration_content %}
-    <form method="post">
+    <form method="post">{% csrf_token %}
         {# Include the hidden fields #}
         {% for hidden in form.hidden_fields %}
             {{ hidden }}

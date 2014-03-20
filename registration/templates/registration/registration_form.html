@@ -9,6 +9,7 @@ The registration form. This will be an instance of some subclass of django.forms
 {% block registration_content %}
 <form  method="post">{%csrf_token%}
     {{form.as_p}}
+    <p><input type="submit" value="Register"/></p>
 </form>
 {% endblock registration_content %}
 
